@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Marina I.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:0 40px;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      backdrop-filter: blur(10px);
+      background:rgba(0,0,0,0.3);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      z-index:1000;
+    }
+
+    .nav-content{
+      height:80px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:700;
+      color:#2f80ff;
+    }
+
+    .menu{
+      display:flex;
+      gap:40px;
+    }
+
+    .menu a{
+      transition:0.3s;
+      color:#d8d8d8;
+    }
+
+    .menu a:hover{
+      color:#2f80ff;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:50px;
+      padding-top:100px;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text span{
+      color:#2f80ff;
+    }
+
+    .hero-text h1{
+      font-size:70px;
+      line-height:1.1;
+      margin:15px 0;
+    }
+
+    .hero-text p{
+      font-size:20px;
+      color:#bdbdbd;
+      max-width:500px;
+      line-height:1.8;
+    }
+
+    .button{
+      display:inline-block;
+      margin-top:35px;
+      background:#2f80ff;
+      padding:15px 35px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .button:hover{
+      transform:translateY(-3px);
+      background:#1f6fff;
+    }
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:400px;
+      height:400px;
+      object-fit:cover;
+      border-radius:50%;
+      border:4px solid #2f80ff;
+      box-shadow:0 0 50px rgba(47,128,255,0.4);
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:100px 0;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    .section-title{
+      font-size:16px;
+      color:#2f80ff;
+      margin-bottom:15px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .section-content{
+      display:flex;
+      justify-content:space-between;
+      gap:60px;
+      align-items:flex-start;
+    }
+
+    .section-content h2{
+      font-size:42px;
+      min-width:300px;
+    }
+
+    .section-content p{
+      color:#c9c9c9;
+      line-height:2;
+      font-size:18px;
+      max-width:600px;
+    }
+
+    /* HABILIDADES */
+
+    .skills{
+      display:flex;
+      gap:25px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .skill{
+      padding:15px 25px;
+      border:1px solid rgba(47,128,255,0.3);
+      border-radius:12px;
+      color:#d9d9d9;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      background:#2f80ff;
+      transform:translateY(-3px);
+    }
+
+    /* CONTATO */
+
+    .contact{
+      display:flex;
+      gap:40px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .contact a{
+      color:#d8d8d8;
+      transition:0.3s;
+    }
+
+    .contact a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#d8d8d8;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .contact i{
+      font-size:22px;
+    }
+
+    .contact a:hover{
+      color:#2f80ff;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:#888;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:50px;
+      }
+
+      .hero-text p{
+        margin:auto;
+      }
+
+      .section-content{
+        flex-direction:column;
+      }
+
+      .menu{
+        gap:20px;
+      }
+
+      .hero-image img{
+        width:300px;
+        height:300px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav-content">
+
+      <div class="logo">
+        M
+      </div>
+
+      <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#personalidade">Personalidade</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <div class="container">
+
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <h3>Olá, eu sou a</h3>
+
+        <h1> <span> Marina</span></h1>
+
+        <p>
+          Graduada em Engenharia de Produção, com experiência nas áreas administrativa, financeira e gestão de processos. 
+          Possuo perfil organizado, analítico e proativo, com foco em eficiência operacional, resolução de problemas e melhoria contínua.
+        </p>
+
+        <a href="#sobre" class="button">
+          Sobre Mim
+        </a>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img src="foto.png" alt="Foto">
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- SOBRE -->
+
+  <section id="sobre">
+
+    <div class="container">
+
+      <div class="section-title">
+        Sobre Mim
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Resumo Profissional
+        </h2>
+
+        <p>
+          Profissional com experiência nas áreas administrativa, financeira e de gestão de processos, 
+          atuando no suporte operacional e estratégico de empresas de diferentes segmentos. 
+          Possui vivência em controle financeiro, elaboração de relatórios, gestão de contas a pagar e receber,
+          folha salarial, admissões e rescisões, além de mapeamento e otimização de processos para aumento da eficiência 
+          operacional. Destaca-se pela organização, capacidade analítica e resolução de demandas do dia a dia. 
+          Atualmente atua como Billing Specialist II, auxiliando pacientes com dúvidas relacionadas a faturamento 
+          e garantindo a precisão das informações nos sistemas financeiros.
+        
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PERSONALIDADE -->
+
+  <section id="personalidade">
+
+    <div class="container">
+
+      <div class="section-title">
+        Personalidade
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Minha Personalidade
+        </h2>
+
+        <p>
+          Sou comunicativa, observadora e organizada.
+          Gosto de ambientes criativos e desafios que me permitam crescer constantemente.
+          Valorizo responsabilidade, empatia e dedicação em tudo o que faço.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HABILIDADES -->
+
+  <section id="habilidades">
+
+    <div class="container">
+
+      <div class="section-title">
+        Habilidades
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Habilidades
+        </h2>
+
+        <div>
+
+          <div class="skills">
+
+            <div class="skill">Comunicação</div>
+            <div class="skill">Criatividade</div>
+            <div class="skill">Organização</div>
+            <div class="skill">Proatividade</div>
+            <div class="skill">Trabalho em equipe</div>
+            <div class="skill">Aprendizado rápido</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+
+  <section id="contato">
+
+    <div class="container">
+
+      <div class="section-title">
+        Contato
+      </div>
+
+      <div class="section-content">
+
+        <h2>
+          Vamos conversar?
+        </h2>
+
+        <div class="contact">
+
+          <a href="https://www.youtube.com/watch?v=0r9Ck_IeWgk">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
+
+          <a href="https://www.google.com/search?q=pornogay&oq=pornogay&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI2NzhqMGo3qAIIsAIB8QXnlFVWM53qAQ&sourceid=chrome&ie=UTF-8&source=chrome.ob">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
+
+          <a href="mailto:quersaberpq@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            E-mail
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 - Marina Iokoiama. Todos os direitos reservados.
+
+  </footer>
+
+</body>
+</html>
